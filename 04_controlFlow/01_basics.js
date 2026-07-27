@@ -27,10 +27,7 @@ const fromemail = true
 
 if(userLoggedIn && debitCard){
     console.log("Allowed to bub courses");
-}// const  score = 1000
-
-// if(score > 500 ) console.log("Test"),console.log("Test2")
-
+}
 
 if(loggedInFromGoogle || fromemail){
     console.log(" user loggedIN");
