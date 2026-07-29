@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://www.google.com/imgres?q=images&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F057%2F068%2F323%2Fsmall%2Fsingle-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-photos%2Fimage&docid=eqP1G-YlcRwZgM&tbnid=Ph7yyZL0izvUGM&vet=12ahUKEwjCurLl2veVAxXY8LsIHeN6F1UQnPAOegQIORAA..i&w=642&h=350&hcb=2&ved=2ahUKEwjCurLl2veVAxXY8LsIHeN6F1UQnPAOegQIORAA" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://www.google.com/imgres?q=images&imgurl=https%3A%2F%2Fimages.ctfassets.net%2Fhrltx12pl8hq%2F28ECAQiPJZ78hxatLTa7Ts%2F2f695d869736ae3b0de3e56ceaca3958%2Ffree-nature-images.jpg%3Ffit%3Dfill%26w%3D1200%26h%3D630&imgrefurl=https%3A%2F%2Fwww.shutterstock.com%2Fdiscover%2Ffree-nature-images&docid=uEeA4F2Pf5UbvM&tbnid=cVgA8oYynNpqQM&vet=12ahUKEwjCurLl2veVAxXY8LsIHeN6F1UQnPAOegQINBAA..i&w=1200&h=630&hcb=2&ved=2ahUKEwjCurLl2veVAxXY8LsIHeN6F1UQnPAOegQINBAA" alt="japan"></li>
+            <li><img width="200px" id="image" src="https://www.google.com/imgres?q=images&imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2016%2F11%2F21%2F06%2F53%2Fbeautiful-natural-image-1844362_1280.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fbeautiful%2520images%2F&docid=SkB2qrN61zNZoM&tbnid=_j-dfG9y2vXXxM&vet=12ahUKEwjCurLl2veVAxXY8LsIHeN6F1UQnPAOegQIdxAA..i&w=1280&h=720&hcb=2&ved=2ahUKEwjCurLl2veVAxXY8LsIHeN6F1UQnPAOegQIdxAA" alt="image"></li>
+        </ul>
+    </div>
+</body>
+<script>
+    
+    // document.getElementById('japan').onclick = function(){
+    //     alert("japan clicked")
+    // }
+    
+    // document.getElementById('japan').addEventListener('click', function(e){
+    //     console.log("clicked inside the url")
+    // },)
+
+    // document.getElementById('image').addEventListener('click',function(e){
+    //     console.log('owl clicked');
+    //     e.stopPropagation()
+  
+    // })
+    // document.getElementById('photoshop').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     console.log("photoshop clicked");
+    // })
+    
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        if(e.target.tagName == 'IMG'){
+            console.log(e.target.id)
+        }
+        let removeIt = e.target.parentNode
+        // removeIt.remove
+        removeIt.parentNode.removeChild(removeIt)
+    })
+
+
+</script>
+
+
+</html>
